@@ -13,6 +13,9 @@ mongoose.connect(db)
 .then(() => console.log("database connected"))
 .catch(err => console.log(err))
 
+//middleware
+app.use(express.json())
+
 // routes
 app.use("/api/user", router)
 
